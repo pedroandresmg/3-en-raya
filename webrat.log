@@ -1,0 +1,2 @@
+# Logfile created on 2017-12-18 16:19:14 -0400 by logger.rb/56815
+D, [2017-12-18T16:19:14.002859 #6932] DEBUG -- : REQUESTING PAGE: GET / with {} and HTTP headers {}
