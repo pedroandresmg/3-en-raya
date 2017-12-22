@@ -27,4 +27,11 @@ describe Posicion do
 								 	  - - -)
 		posicion.turno.should=="o"
 	end
+
+	it "deberia desmarcar espacio en el tablero" do
+		posicion=Posicion.new.marcar(1).desmarcar
+		reiniciar=Posicion.new
+		posicion.tablero.should==reiniciar.tablero
+		posicion.turno.should==reiniciar.turno
+	end
 end

@@ -5,19 +5,27 @@ class Posicion
 		@tamano=@dimension*@dimension
 		@tablero= tablero || Array.new(@tamano, "-")
 		@turno=turno
+		@listaDeMarcas=[]
 	end
 
 	def marcar espacio
 		@tablero[espacio-1]=@turno
 		@turno=otroTurno
+		@listaDeMarcas << espacio
 		self
 	end
 
-	def otroTurnos
+	def otroTurno
 		if (@turno=="x")
 			@turno="o"
 		elsif (@turno=="o")
 			@turno="x"
 		end
+	end
+
+	def desmarcar
+		@tablero[@listaDeMarcas.pop]= "-"
+		@turno=otroTurno
+		self
 	end
 end
