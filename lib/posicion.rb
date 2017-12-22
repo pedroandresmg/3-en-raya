@@ -1,9 +1,9 @@
 class Posicion
 	attr_accessor :tablero, :turno
-	def initialize
+	def initialize (tablero=nil, turno="x")
 		@dimension=3
 		@tamano=@dimension*@dimension
-		@tablero=Array.new(@tamano, "-")
-		@turno="x"
+		@tablero= tablero || Array.new(@tamano, "-")
+		@turno=turno
 	end
 end
