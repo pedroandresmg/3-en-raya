@@ -9,4 +9,14 @@ describe Posicion do
 									  - - -)
 		posicion.turno.should == "x"
 	end
+
+	it "deberia inicializar una posicion con un tablero y un turno" do
+		posicion=Posicion.new(%w(x - -
+								 - o -
+								 - - -), "o")
+		posicion.tablero.should==%w(x  -
+								 	- o -
+								 	- - -)
+		posicion.turno.should=="o"
+	end
 end
