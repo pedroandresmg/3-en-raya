@@ -11,7 +11,7 @@ class Posicion
 	def marcar espacio
 		@tablero[espacio-1]=@turno
 		@turno=otroTurno
-		@listaDeMarcas << espacio
+		@listaDeMarcas << espacio-1
 		self
 	end
 
@@ -27,5 +27,9 @@ class Posicion
 		@tablero[@listaDeMarcas.pop]= "-"
 		@turno=otroTurno
 		self
+	end
+
+	def posiblesMovimientos
+		@tablero.map.with_index { |espacioNulo, espacio| espacioNulo=="-" ? espacio :nil }
 	end
 end

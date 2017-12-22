@@ -34,4 +34,8 @@ describe Posicion do
 		posicion.tablero.should==reiniciar.tablero
 		posicion.turno.should==reiniciar.turno
 	end
+
+	it "deberia listar los posibles movimientos para la poicion inicial" do
+		Posicion.new.posiblesMovimientos == (1..9).to_a
+	end
 end
