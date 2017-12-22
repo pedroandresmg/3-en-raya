@@ -20,5 +20,10 @@ describe Posicion do
 		posicion.turno.should=="o"
 	end
 
-
+	it "deberia marcar espacio en el tablero" do
+		posicion=Posicion.new.marcar(1)
+		posicion.tablero.should == %w(x - -
+								 	  - - -
+								 	  - - -)
+		posicion.turno.should=="o"
 end
