@@ -1,12 +1,12 @@
 require 'spec_helper'
-require 'app'
+require 'posicion'
 
 describe Posicion do 
 	it "deberia inicializar un nuevo tablero" do
-		posicion = Posicio.new
-		poicion.tablero.should == %w(- - -
-									 - - -
-									 - - -)
+		posicion = Posicion.new
+		posicion.tablero.should == %w(- - -
+									  - - -
+									  - - -)
 		posicion.turno.should == "x"
 	end
 end
