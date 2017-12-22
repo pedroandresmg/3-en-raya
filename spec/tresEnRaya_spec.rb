@@ -14,7 +14,7 @@ describe Posicion do
 		posicion=Posicion.new(%w(x - -
 								 - o -
 								 - - -), "o")
-		posicion.tablero.should==%w(x  -
+		posicion.tablero.should==%w(x - -
 								 	- o -
 								 	- - -)
 		posicion.turno.should=="o"
