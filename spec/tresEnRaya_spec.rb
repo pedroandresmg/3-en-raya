@@ -26,4 +26,5 @@ describe Posicion do
 								 	  - - -
 								 	  - - -)
 		posicion.turno.should=="o"
+	end
 end
