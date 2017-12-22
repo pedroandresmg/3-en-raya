@@ -29,7 +29,7 @@ class Posicion
 		self
 	end
 
-	def posiblesMovimientos
-		@tablero.map.with_index { |espacioNulo, espacio| espacioNulo=="-" ? espacio :nil }
+	def posiblesMarcamientos
+		@tablero.map.with_index { |espacioNulo, espacio| espacioNulo=="-" ? espacio+1 :nil }.compact
 	end
 end

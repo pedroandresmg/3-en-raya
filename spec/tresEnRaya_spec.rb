@@ -35,7 +35,11 @@ describe Posicion do
 		posicion.turno.should==reiniciar.turno
 	end
 
-	it "deberia listar los posibles movimientos para la poicion inicial" do
-		Posicion.new.posiblesMovimientos == (1..9).to_a
+	it "deberia listar los posibles marcamientos para la poicion inicial" do
+		Posicion.new.posiblesMarcamientos == (1..9).to_a
+	end
+
+	it "deberia listar los posibles marcamientos para una posicion" do
+		Posicion.new.marcar(3).posiblesMarcamientos.should==[1,2,4,5,6,7,8,9]
 	end
 end
